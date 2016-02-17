@@ -1,3 +1,9 @@
+/**
+ * Filename: contact_me.js
+ * Author: Slevin Zhang
+ * Website name: slevin.im
+ * description: Ajax contact form function
+ */
 $(function() {
 
     $("#contactForm input,#contactForm textarea").jqBootstrapValidation({

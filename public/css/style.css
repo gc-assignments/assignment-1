@@ -1,3 +1,11 @@
+/*
+ * Filename: style.css
+ * Author: Slevin Zhang
+ * Website name: slevin.im
+ * description: Main custom CSS style file
+ */
+
+/* ==================== General Styles ==================== */
 body {
   overflow-x: hidden;
   font-family: "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -141,6 +149,8 @@ fieldset[disabled] .btn-xl.active {
   color: #FF4E4E;
   background-color: #ffffff;
 }
+
+/* ==================== Header Styles ==================== */
 .navbar-default {
   background-color: #222222;
   border-color: transparent;
@@ -270,6 +280,8 @@ header .intro-text .intro-heading {
     margin-bottom: 50px;
   }
 }
+
+/* ==================== Common Section Styles ==================== */
 section {
   padding: 100px 0;
   min-height: 90vh;
@@ -296,17 +308,19 @@ section h3.section-subheading {
   margin: 15px 0;
   text-transform: none;
 }
-#portfolio .portfolio-item {
+
+/* ==================== Projects Styles ==================== */
+#projects .projects-item {
   margin: 0 0 15px;
   right: 0;
 }
-#portfolio .portfolio-item .portfolio-link {
+#projects .projects-item .projects-link {
   display: block;
   position: relative;
   max-width: 400px;
   margin: 0 auto;
 }
-#portfolio .portfolio-item .portfolio-link .portfolio-hover {
+#projects .projects-item .projects-link .projects-hover {
   background: rgba(244, 67, 54, 0.8);
   position: absolute;
   width: 100%;
@@ -316,10 +330,10 @@ section h3.section-subheading {
   -webkit-transition: all ease 0.5s;
   -moz-transition: all ease 0.5s;
 }
-#portfolio .portfolio-item .portfolio-link .portfolio-hover:hover {
+#projects .projects-item .projects-link .projects-hover:hover {
   opacity: 1;
 }
-#portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content {
+#projects .projects-item .projects-link .projects-hover .projects-hover-content {
   position: absolute;
   width: 100%;
   height: 20px;
@@ -329,38 +343,111 @@ section h3.section-subheading {
   margin-top: -12px;
   color: white;
 }
-#portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content i {
+#projects .projects-item .projects-link .projects-hover .projects-hover-content i {
   margin-top: -12px;
 }
-#portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content h3,
-#portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content h4 {
+#projects .projects-item .projects-link .projects-hover .projects-hover-content h3,
+#projects .projects-item .projects-link .projects-hover .projects-hover-content h4 {
   margin: 0;
 }
-#portfolio .portfolio-item .portfolio-caption {
+#projects .projects-item .projects-caption {
   max-width: 400px;
   margin: 0 auto;
   background-color: white;
   text-align: center;
   padding: 25px;
 }
-#portfolio .portfolio-item .portfolio-caption h4 {
+#projects .projects-item .projects-caption h4 {
   text-transform: none;
   margin: 0;
 }
-#portfolio .portfolio-item .portfolio-caption p {
+#projects .projects-item .projects-caption p {
   font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-style: italic;
   font-size: 16px;
   margin: 0;
 }
-#portfolio * {
+#projects * {
   z-index: 2;
 }
 @media (min-width: 767px) {
-  #portfolio .portfolio-item {
+  #projects .projects-item {
     margin: 0 0 30px;
   }
 }
+
+/* --------------- Project Modal Styles --------------- */
+.projects-modal .modal-content {
+  border-radius: 0;
+  background-clip: border-box;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border: none;
+  min-height: 100%;
+  padding: 100px 0;
+  text-align: center;
+}
+.projects-modal .modal-content h2 {
+  margin-bottom: 15px;
+  font-size: 3em;
+}
+.projects-modal .modal-content p {
+  margin-bottom: 30px;
+}
+.projects-modal .modal-content p.item-intro {
+  margin: 20px 0 30px;
+  font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-style: italic;
+  font-size: 16px;
+}
+.projects-modal .modal-content ul.list-inline {
+  margin-bottom: 30px;
+  margin-top: 0;
+}
+.projects-modal .modal-content img {
+  margin-bottom: 30px;
+}
+.projects-modal .close-modal {
+  position: absolute;
+  width: 75px;
+  height: 75px;
+  background-color: transparent;
+  top: 25px;
+  right: 25px;
+  cursor: pointer;
+}
+.projects-modal .close-modal:hover {
+  opacity: 0.3;
+}
+.projects-modal .close-modal .lr {
+  height: 75px;
+  width: 1px;
+  margin-left: 35px;
+  background-color: #222222;
+  transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  /* IE 9 */
+  -webkit-transform: rotate(45deg);
+  /* Safari and Chrome */
+  z-index: 1051;
+}
+.projects-modal .close-modal .lr .rl {
+  height: 75px;
+  width: 1px;
+  background-color: #222222;
+  transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  /* IE 9 */
+  -webkit-transform: rotate(90deg);
+  /* Safari and Chrome */
+  z-index: 1052;
+}
+.projects-modal .modal-backdrop {
+  opacity: 0;
+  display: none;
+}
+
+/* ==================== About Styles ==================== */
 .timeline {
   list-style: none;
   padding: 0;
@@ -528,25 +615,8 @@ section h3.section-subheading {
     padding: 0 100px 20px 20px;
   }
 }
-.team-member {
-  text-align: center;
-  margin-bottom: 50px;
-}
-.team-member img {
-  margin: 0 auto;
-  border: 7px solid white;
-}
-.team-member h4 {
-  margin-top: 25px;
-  margin-bottom: 0;
-  text-transform: none;
-}
-.team-member p {
-  margin-top: 0;
-}
-aside.clients img {
-  margin: 50px auto;
-}
+
+/* ==================== Contact Styles ==================== */
 section#contact {
   background-color: #222222;
   background-image: url('../img/map-image.png');
@@ -602,6 +672,8 @@ section#contact :-ms-input-placeholder {
 section#contact .text-danger {
   color: #e74c3c;
 }
+
+/* ==================== Footer Styles ==================== */
 footer {
   padding: 25px 0;
   text-align: center;
@@ -646,75 +718,6 @@ ul.social-buttons li a:active {
 .btn.active,
 .btn:active:focus {
   outline: none;
-}
-.portfolio-modal .modal-content {
-  border-radius: 0;
-  background-clip: border-box;
-  -webkit-box-shadow: none;
-  box-shadow: none;
-  border: none;
-  min-height: 100%;
-  padding: 100px 0;
-  text-align: center;
-}
-.portfolio-modal .modal-content h2 {
-  margin-bottom: 15px;
-  font-size: 3em;
-}
-.portfolio-modal .modal-content p {
-  margin-bottom: 30px;
-}
-.portfolio-modal .modal-content p.item-intro {
-  margin: 20px 0 30px;
-  font-family: "Droid Serif", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-style: italic;
-  font-size: 16px;
-}
-.portfolio-modal .modal-content ul.list-inline {
-  margin-bottom: 30px;
-  margin-top: 0;
-}
-.portfolio-modal .modal-content img {
-  margin-bottom: 30px;
-}
-.portfolio-modal .close-modal {
-  position: absolute;
-  width: 75px;
-  height: 75px;
-  background-color: transparent;
-  top: 25px;
-  right: 25px;
-  cursor: pointer;
-}
-.portfolio-modal .close-modal:hover {
-  opacity: 0.3;
-}
-.portfolio-modal .close-modal .lr {
-  height: 75px;
-  width: 1px;
-  margin-left: 35px;
-  background-color: #222222;
-  transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  /* IE 9 */
-  -webkit-transform: rotate(45deg);
-  /* Safari and Chrome */
-  z-index: 1051;
-}
-.portfolio-modal .close-modal .lr .rl {
-  height: 75px;
-  width: 1px;
-  background-color: #222222;
-  transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
-  /* IE 9 */
-  -webkit-transform: rotate(90deg);
-  /* Safari and Chrome */
-  z-index: 1052;
-}
-.portfolio-modal .modal-backdrop {
-  opacity: 0;
-  display: none;
 }
 ::-moz-selection {
   text-shadow: none;

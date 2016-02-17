@@ -6,6 +6,8 @@
  * License: MIT <http://opensource.org/licenses/mit-license.php> - see LICENSE file
  *
  * http://ReactiveRaven.github.com/jqBootstrapValidation/
+ * Filename: jqBootstrapValidation.js
+ * description: bootstrap form validation plugin
  */
 
 (function( $ ){
