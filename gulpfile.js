@@ -9,7 +9,7 @@ gulp.task('default', function() {
     .pipe(minify())
     .pipe(rename({ suffix: '.min' }))
     .pipe(gulp.dest('./public/css/'));
-  gulp.src('./public/js/*.js')
+  gulp.src('./scripts/*.js')
     .pipe(concat('all.js'))
     .pipe(uglify())
     .pipe(rename({ suffix: '.min' }))
