@@ -1,3 +1,10 @@
+/**
+ * Filename: routes/index.js
+ * Author: Slevin Zhang
+ * Website name: slevin.im
+ * description: Express routes handling
+ */
+/* Dependencies */
 var express = require('express');
 var router = express.Router();
 var nodemailer = require('nodemailer');
@@ -11,18 +18,22 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Home', shrink: false });
 });
 
+/* GET services page. */
 router.get('/services', function(req, res, next) {
   res.render('services', { title: 'Services', shrink: true });
 });
 
+/* GET projects page. */
 router.get('/projects', function(req, res, next) {
   res.render('projects', { title: 'Projects', shrink: true });
 });
 
+/* GET about page. */
 router.get('/about', function(req, res, next) {
   res.render('about', { title: 'About', shrink: true });
 });
 
+/* GET contact page. */
 router.get('/contact', function(req, res, next) {
   res.render('contact', { title: 'Contact', shrink: true });
 });
@@ -43,6 +54,7 @@ function buildContactHtml(name, message, phone) {
   return html;
 }
 
+/* Post contact form and send emails. */
 router.post('/contact', function(req, res, next) {
   if (req.body.name && req.body.phone && req.body.email && req.body.message) {
     var mailOptions = {
